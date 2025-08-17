@@ -1,0 +1,42 @@
+{
+  "name": "hailo model zoo",
+  "dockerFile": "../Dockerfile",
+  // 1️⃣  Add the official Node feature so `npm` & Node 22 exist
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": { "version": "22" }
+  },
+
+  // Load environment variables from .env file
+  "envFile": "../.env",
+  "build": {
+    "args": {
+      "OPENAI_API_KEY": "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"
+    }
+  },
+  "containerEnv": {
+    "OPENAI_API_KEY": "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"
+  },
+  "runArgs": [
+    "--privileged",
+    "--network", "host",
+    "--ipc", "host"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python@2024.4.1",
+        "ms-python.black-formatter",
+        "ms-vscode.cpptools-extension-pack",
+        "ms-vscode.cmake-tools",
+        "twxs.cmake",
+        "yzhang.markdown-all-in-one",
+        "github.vscode-github-actions",
+        "DavidAnson.vscode-markdownlint"
+      ]
+    }
+  },
+
+  "workspaceMount": "source=${localWorkspaceFolder},target=/${localWorkspaceFolderBasename},type=bind",
+  "workspaceFolder": "/${localWorkspaceFolderBasename}",
+  "postCreateCommand": "./.devcontainer/codexsetup.sh"
+}
