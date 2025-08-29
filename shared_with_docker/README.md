@@ -33,7 +33,7 @@ Convert ONNX models to Hailo8 HEF with a calibration‑set builder for YOLO data
      --net-input-shape images:1,3,640,640 \
      --max-calib 1024
    ```
-   If parsing needs explicit end nodes (needed for yolo8), add:
+   If parsing needs explicit end nodes, add:
    ```bash
    --end-nodes \
    "/model.22/cv2.0/cv2.0.2/Conv" \
