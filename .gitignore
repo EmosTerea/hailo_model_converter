@@ -1,0 +1,11 @@
+*.log
+hailo8*.tar.gz
+hailo_ai_sw_suite_docker_run.sh
+shared_with_docker/Archive/
+shared_with_docker/calib_yolo/
+shared_with_docker/doc/
+*.jpg
+*.jpeg
+*.hef
+*.har
+*.onnx
