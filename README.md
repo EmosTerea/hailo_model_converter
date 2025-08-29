@@ -22,6 +22,7 @@ python converter.py --onnx model.onnx --model-name model --calib-folder ./calib_
 ```
 
 ## Expected tree structure:
+```bash
 shared_with_docker
 ├── Archive
 │   ├── generated_dataset_01.yaml
@@ -49,3 +50,4 @@ shared_with_docker
 ├── model.hef
 ├── model.onnx
 └── model_quantized_model.har
+```
